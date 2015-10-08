@@ -7,6 +7,15 @@ using System.Management;
 
 namespace CRT.Module
 {
+    /// <summary>
+    /// Module for retrieving product keys.
+    /// 
+    /// Supports:
+    /// - Windows xp - 10
+    /// 
+    /// ToDo:
+    /// - Office
+    /// </summary>
     class ProductCode : ReportingModuleInterface
     {
         private string moduleName = "Product Key";
