@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CRT.OutputFormatter
+﻿namespace CRT.OutputFormatter
 {
     class Text : OutputInterface
     {
@@ -25,6 +19,11 @@ namespace CRT.OutputFormatter
             {
                 text = value;
             }
+        }
+
+        public string FormatConsole()
+        {
+            return this.InnerText;
         }
     }
 }

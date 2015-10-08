@@ -9,7 +9,13 @@
             foreach(var reportingModule in reportingModules)
             {
                 System.Console.WriteLine(reportingModule.ModuleName);
+                var resultParts = reportingModule.getResult();
+                foreach(var result in resultParts)
+                {
+                    System.Console.WriteLine(result.FormatConsole());
+                }
             }
+            System.Console.ReadLine();
         }
     }
 }

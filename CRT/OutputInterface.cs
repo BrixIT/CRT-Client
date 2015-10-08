@@ -8,6 +8,6 @@ namespace CRT
 {
     interface OutputInterface
     {
-
+        string FormatConsole();
     }
 }
