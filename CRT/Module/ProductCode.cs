@@ -28,6 +28,12 @@ namespace CRT.Module
             }
         }
 
+        public bool isSupportedPlatform()
+        {
+            // This one can run on any windows version
+            return true;
+        }
+
         public List<OutputInterface> getResult()
         {
             var result = new List<OutputInterface>();
@@ -142,6 +148,5 @@ namespace CRT.Module
             }
             return key;
         }
-
     }
 }

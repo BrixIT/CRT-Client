@@ -16,7 +16,11 @@ namespace CRT
             classes.Remove(typeof(ReportingModuleInterface));
             foreach(var classType in classes)
             {
-                result.Add((ReportingModuleInterface) Activator.CreateInstance(classType));
+                var instance = (ReportingModuleInterface)Activator.CreateInstance(classType);
+                if (instance.isSupportedPlatform())
+                {
+                    result.Add(instance);
+                }
             }
             return result;
         }

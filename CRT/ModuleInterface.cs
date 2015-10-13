@@ -3,5 +3,6 @@
     interface ModuleInterface
     {
         string ModuleName { get;}
+        bool isSupportedPlatform();
     }
 }
