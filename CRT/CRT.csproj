@@ -40,6 +40,10 @@
       <HintPath>..\packages\ConsoleTables.1.0.0\lib\net45\ConsoleTables.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +51,7 @@
     <Reference Include="System.Management" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructure\EmailAccount.cs" />
     <Compile Include="ModuleInterface.cs" />
     <Compile Include="ModuleResolver.cs" />
     <Compile Include="Module\ProductCode.cs" />

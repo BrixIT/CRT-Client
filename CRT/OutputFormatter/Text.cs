@@ -1,4 +1,7 @@
-﻿namespace CRT.OutputFormatter
+﻿using System;
+using Newtonsoft.Json;
+
+namespace CRT.OutputFormatter
 {
     class Text : OutputInterface
     {
@@ -24,6 +27,16 @@
         public string FormatConsole()
         {
             return this.InnerText;
+        }
+
+        public void FormatJson(ref JsonWriter writer)
+        {
+            writer.WriteStartObject();
+            writer.WritePropertyName("type");
+            writer.WriteValue("text");
+            writer.WritePropertyName("text");
+            writer.WriteValue(this.InnerText);
+            writer.WriteEndObject();
         }
     }
 }

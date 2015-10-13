@@ -1,5 +1,7 @@
 ﻿using ConsoleTables.Core;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using System;
 
 namespace CRT.OutputFormatter
 {
@@ -32,6 +34,39 @@ namespace CRT.OutputFormatter
                 table.AddRow(row);
             }
             return table.ToString();
+        }
+
+        public void FormatJson(ref JsonWriter writer)
+        {
+            writer.WriteStartObject();
+
+            writer.WritePropertyName("type");
+            writer.WriteValue("table");
+
+            writer.WritePropertyName("headers");
+            writer.WriteStartArray();
+            foreach(var header in this.headers.ToArray())
+            {
+                writer.WriteValue(header);
+            }
+            writer.WriteEndArray();
+
+            writer.WritePropertyName("rows");
+            writer.WriteStartArray();
+            foreach (var row in this.rows.ToArray())
+            {
+                writer.WriteStartArray();
+
+                foreach( var field in row)
+                {
+                    writer.WriteValue(field);
+                }
+
+                writer.WriteEndArray();
+            }
+            writer.WriteEndArray();
+
+            writer.WriteEndObject();
         }
     }
 }
