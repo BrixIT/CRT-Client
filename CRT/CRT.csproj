@@ -97,6 +97,7 @@
     <Compile Include="ModuleInterface.cs" />
     <Compile Include="ModuleResolver.cs" />
     <Compile Include="Module\ProductCode.cs" />
+    <Compile Include="Module\RuntimeReport.cs" />
     <Compile Include="Module\VirusScannerReport.cs" />
     <Compile Include="Module\WindowsUpdateReport.cs" />
     <Compile Include="OutputFormatter\Table.cs" />
