@@ -55,6 +55,7 @@
     <Compile Include="ModuleInterface.cs" />
     <Compile Include="ModuleResolver.cs" />
     <Compile Include="Module\ProductCode.cs" />
+    <Compile Include="Module\WindowsUpdateReport.cs" />
     <Compile Include="OutputFormatter\Table.cs" />
     <Compile Include="OutputFormatter\Text.cs" />
     <Compile Include="OutputInterface.cs" />
@@ -67,7 +68,17 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="WUApiLib">
+      <Guid>{B596CC9F-56E5-419E-A622-E01BB457431E}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
