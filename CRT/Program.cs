@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRT.Helper;
+using System;
 using System.Collections.Generic;
 
 namespace CRT
@@ -12,6 +13,11 @@ namespace CRT
             {
                 Console.Clear();
                 Console.WriteLine("---=[ Computer Repair Toolkit ]=---\n");
+
+                // The PC ID should be unique for the hardare of the computer
+                var pcId = Identification.GetMotherBoardID();
+                Console.WriteLine("PC ID: " + pcId + "\n");
+
                 Console.WriteLine(" r. Go to the report menu");
                 Console.WriteLine(" t. Go to the task menu");
                 Console.WriteLine(" q. Quit");
