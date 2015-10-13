@@ -13,6 +13,7 @@ namespace CRT.Module
     /// - Java 8
     /// - Adobe AIR
     /// - Adobe Shockwave
+    /// - .NET 2.0 - 4.6
     /// </summary>
     class RuntimeReport : ReportingModuleInterface
     {
