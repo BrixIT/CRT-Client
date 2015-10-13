@@ -19,6 +19,14 @@ namespace CRT.OutputFormatter
             this.rows.Clear();
         }
 
+        public int RowCount
+        {
+            get
+            {
+                return this.rows.Count;
+            }
+        }
+
         public void SetHeaders(string[] headers)
         {
             this.headers = new List<string>(headers);
