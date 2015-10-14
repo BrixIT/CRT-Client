@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="DataStructure\EmailAccount.cs" />
     <Compile Include="DataStructure\InstalledSoftware.cs" />
+    <Compile Include="DataStructure\Json\RegisterRequest.cs" />
     <Compile Include="Helper\Identification.cs" />
     <Compile Include="Helper\InstalledSoftware.cs" />
     <Compile Include="Helper\MasterLocator.cs" />
