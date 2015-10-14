@@ -1,7 +1,6 @@
 ﻿using CRT.Helper;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Zeroconf;
 
 namespace CRT
@@ -134,9 +133,8 @@ namespace CRT
 
         static void Connect(string ip, int port)
         {
-            Console.WriteLine("Connecting to " + ip + ":" + port.ToString());
+            RemoteControl remote = new RemoteControl(ip, port);
         }
-
 
     }
 }
