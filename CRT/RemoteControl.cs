@@ -18,7 +18,14 @@ namespace CRT
             Console.WriteLine(String.Format("Connecting to {0}:{1}", ip, port));
 
             RegisterRequest request = new RegisterRequest();
-            request.ComputerId = Identification.GetMotherBoardID(); ;
+            request.ComputerId = Identification.GetMotherBoardID();
+
+            var resolver = new ModuleResolver();
+            foreach(var reportingModule in resolver.GetReportingModules())
+            {
+                request.ReportingModules.Add(reportingModule.ModuleName);
+            }
+
             JObject baseInfo = apiCall("register", request);
             Console.WriteLine("State: " + baseInfo["state"]);
         }
