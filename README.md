@@ -24,24 +24,6 @@ communicate with a central server to receive the commands to run and to store ma
 
 ![Reporting](https://raw.githubusercontent.com/BrixIT/CRT-Client/master/reporting.png)
 
-## Define the central server in Avahi
+## The central server
 
-This is an example service file for Avahi to publish the central server on your network
-
-```xml
-<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
-<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-
-<!-- See avahi.service(5) for more information about this configuration file -->
-
-<service-group>
-
-  <name replace-wildcards="yes">CRT Master server (%h)</name>
-
-  <service>
-    <type>_crt._tcp</type>
-    <port>31337</port>
-  </service>
-
-</service-group>
-```
+Information about the central server is in the [central server repository](https://github.com/BrixIT/CRT-Masterserver)
