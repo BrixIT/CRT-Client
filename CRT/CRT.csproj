@@ -99,6 +99,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandModuleInterface.cs" />
+    <Compile Include="CommandOptionInterface.cs" />
     <Compile Include="DataStructure\EmailAccount.cs" />
     <Compile Include="DataStructure\InstalledSoftware.cs" />
     <Compile Include="Helper\Identification.cs" />
@@ -107,6 +109,7 @@
     <Compile Include="ModuleInterface.cs" />
     <Compile Include="ModuleResolver.cs" />
     <Compile Include="Module\ProductCode.cs" />
+    <Compile Include="Module\RuntimeAdware.cs" />
     <Compile Include="Module\RuntimeReport.cs" />
     <Compile Include="Module\VirusScannerReport.cs" />
     <Compile Include="Module\WindowsUpdateReport.cs" />
