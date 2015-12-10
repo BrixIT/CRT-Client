@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRT.CommandOption;
+using System;
 using System.Collections.Generic;
 
 namespace CRT.Module
@@ -28,7 +29,10 @@ namespace CRT.Module
 
         public List<CommandOptionInterface> GetOptions()
         {
-            throw new NotImplementedException();
+            var options = new List<CommandOptionInterface>();
+            options.Add(new Checkbox("Disable java updater adware", true));
+            options.Add(new Checkbox("Disable adobe reader updater adware", true));
+            return options;
         }
 
         public bool isSupportedPlatform()

@@ -8,6 +8,12 @@ namespace CRT.CommandOption
         private bool isChecked = false;
         private string label = "";
 
+        public Checkbox(string label, bool defaultValue)
+        {
+            this.isChecked = defaultValue;
+            this.label = label;
+        }
+
         public bool IsChecked
         {
             get
