@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Management;
 
 namespace CRT.Helper
@@ -15,6 +16,15 @@ namespace CRT.Helper
                 motherBoard = (string)mo["UUID"];
             }
             return motherBoard;
+        }
+
+        public static string GetWindowsInstallationId()
+        {
+            var localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine,
+                              RegistryView.Default);
+            string keyPath = @"Software\Microsoft\Windows NT\CurrentVersion";
+            string productId = (string)localMachine.OpenSubKey(keyPath).GetValue("ProductId");
+            return productId;
         }
     }
 }
