@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 
 namespace CRT
 {
     interface CommandOptionInterface
     {
-        string GetLabel();
-        string GetValue();
-        string GetDefault();
+        string FormatConsole();
+        void FormatJson(ref JsonWriter writer);
     }
 }
