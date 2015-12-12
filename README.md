@@ -9,6 +9,7 @@ communicate with a central server to receive the commands to run and to store ma
 - Get windows product key
 - List installed antivirus/malware products
 - List installed runtimes
+- Disable adware in adobe and java updater
 
 ## Planned tasks
 
